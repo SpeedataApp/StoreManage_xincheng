@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/nav_tts_download_resume_normal"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7" >
+
+        <TextView
+            style="@style/TextOne"
+            android:layout_weight="1.5"
+            android:text="@string/weifeimingcheng" />
+
+        <TextView
+            android:id="@+id/wasteName"
+            style="@style/TextOne"
+            android:layout_weight="5.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal"
+        android:weightSum="7" >
+
+        <TextView
+            style="@style/TextOne"
+            android:layout_weight="1.5"
+            android:text="@string/yoouhaichengfeng" />
+
+        <TextView
+            android:id="@+id/harmFeature"
+            style="@style/TextOne"
+            android:layout_weight="5.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal"
+        android:weightSum="7" >
+
+        <TextView
+            style="@style/TextOne"
+            android:layout_weight="1.5"
+            android:text="@string/chanfeizhuangzhi" />
+
+        <TextView
+            android:id="@+id/zhuangzhi"
+            style="@style/TextOne"
+            android:layout_weight="5.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal"
+        android:weightSum="7" >
+
+        <TextView
+            style="@style/TextOne"
+            android:layout_weight="1.5"
+            android:text="@string/weixianqingkuang" />
+
+        <TextView
+            android:id="@+id/dangerCase"
+            style="@style/TextOne"
+            android:layout_weight="5.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal"
+        android:weightSum="7" >
+
+        <TextView
+            style="@style/TextOne"
+            android:layout_weight="1.5"
+            android:text="@string/zhuanyiren" />
+
+        <TextView
+            android:id="@+id/shifter"
+            style="@style/TextOne"
+            android:layout_weight="2" />
+
+        <TextView
+            android:id="@+id/weightName"
+            style="@style/TextOne"
+            android:layout_weight="1.5"
+            android:text="@string/zhongliang" />
+
+        <TextView
+            android:id="@+id/weight"
+            style="@style/TextOne"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+</LinearLayout>

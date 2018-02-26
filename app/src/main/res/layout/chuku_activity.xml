@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_top"
+        layout="@layout/top_title_commom" />
+
+    <LinearLayout
+        android:id="@+id/bbuttom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:orientation="vertical"
+        android:padding="5dip">
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/u_tab_above" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/common_button_pressed"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="#555555"
+                android:textSize="@dimen/title_size" />
+
+            <Button
+                android:id="@+id/btn_total"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/common_button_pressed"
+                android:gravity="center"
+                android:text="总重量"
+                android:textColor="#555555"
+                android:textSize="@dimen/title_size"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/mCancle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/common_button_pressed"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#555555"
+                android:textSize="@dimen/title_size"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/mChuku"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/v1"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/common_button_pressed"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="#555555"
+                android:textSize="@dimen/title_size" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bbuttom"
+        android:layout_below="@+id/title_top"
+        android:background="#f1f1f1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:weightSum="12">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/biaoqian"
+                android:textColor="#636363"
+                android:textSize="@dimen/title_size" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mQrCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="#9A9A9A"
+                    android:textSize="@dimen/title_size" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/txt_bg" />
+            </LinearLayout>
+
+            <com.xuyulong.ui.MySpinnerButton
+                android:id="@+id/mySpinnerButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:src="@drawable/s1" />
+
+            <ImageButton
+                android:id="@+id/handInput"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:src="@drawable/pan" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/waste_detail"
+            layout="@layout/waste_detail" />
+
+        <LinearLayout style="@style/TextBule">
+
+            <CheckBox
+                style="@style/TextTitle"
+                android:layout_height="@dimen/title_size"
+                android:layout_weight="1"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/TextTitle"
+                android:layout_weight="4"
+                android:text="@string/biaoqianhao" />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="@dimen/title_size"
+                android:layout_marginRight="2dip"
+                android:background="#636363" />
+
+            <TextView
+                style="@style/TextTitle"
+                android:layout_weight="2.5"
+                android:text="@string/mingcheng" />
+
+            <TextView
+                style="@style/TextTitle"
+                android:layout_weight="1.5"
+                android:text="@string/shuliang" />
+
+            <TextView
+                android:id="@+id/count_tv"
+                style="@style/TextTitle"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <com.xuyulong.ui.QQListView
+            android:id="@+id/mList"
+            style="@style/List"></com.xuyulong.ui.QQListView>
+    </LinearLayout>
+
+</RelativeLayout>

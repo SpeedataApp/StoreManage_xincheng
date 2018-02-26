@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title_person" />
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:paddingLeft="20dip"
+	    android:paddingRight="20dip"
+	    android:layout_marginTop="30dip" >
+
+	    <TextView
+	        android:id="@+id/mLoginOut"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="注销"
+	        android:textColor="#686868"
+	        android:textSize="20dp" />
+	    
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/u_tab_above" />
+
+	      <TextView
+	          android:id="@+id/mExit"
+	          android:layout_width="fill_parent"
+	          android:layout_height="wrap_content"
+	          android:layout_marginTop="10dip"
+	          android:text="退出"
+	          android:textColor="#686868"
+	          android:textSize="20dp" />
+	   
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/u_tab_above" />
+	</LinearLayout>
+</LinearLayout>

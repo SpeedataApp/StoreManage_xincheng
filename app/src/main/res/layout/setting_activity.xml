@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_title_person" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+
+        <CheckBox
+            android:id="@+id/mYuYing"
+            style="@style/MyCheckBox2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="语音提示"
+            android:textColor="#686868"
+            android:textSize="@dimen/title_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/u_tab_above" />
+
+        <TextView
+            android:id="@+id/mUrl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/bg_input"
+            android:text="192.168.0.1:9090"
+            android:textColor="#686868"
+            android:textSize="@dimen/title_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/u_tab_above" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+
+        <CheckBox
+            android:id="@+id/dibang_433"
+            style="@style/MyCheckBox2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="433地磅"
+            android:textColor="#686868"
+            android:textSize="@dimen/title_size" />
+
+        <CheckBox
+            android:id="@+id/dibang_ble"
+            style="@style/MyCheckBox2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="蓝牙地磅"
+            android:textColor="#686868"
+            android:textSize="@dimen/title_size" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/u_tab_above" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+
+        <CheckBox
+            android:id="@+id/duka_uhf"
+            style="@style/MyCheckBox2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="超高频读卡"
+            android:textColor="#686868"
+            android:textSize="@dimen/title_size" />
+
+        <CheckBox
+            android:id="@+id/duka_nfc"
+            style="@style/MyCheckBox2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NFC读卡"
+            android:textColor="#686868"
+            android:textSize="@dimen/title_size" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/u_tab_above" />
+</LinearLayout>

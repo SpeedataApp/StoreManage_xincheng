@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_top"
+        layout="@layout/top_title_commom" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_top"
+        android:background="#f1f1f1"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:weightSum="12" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/biaoqian"
+                android:textColor="#636363"
+                android:textSize="@dimen/title_size" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/mQrCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="#9A9A9A"
+                    android:textSize="@dimen/title_size" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/txt_bg" />
+            </LinearLayout>
+
+            <com.xuyulong.ui.MySpinnerButton
+                android:id="@+id/mySpinnerButton"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:src="@drawable/s1" />
+            
+            <ImageButton 
+                android:id="@+id/handInput"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:src="@drawable/pan" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/waste_detail"
+            layout="@layout/waste_detail" />
+
+        <LinearLayout style="@style/TextBule" >
+
+            <TextView
+                android:layout_width="35dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="序号"
+                android:textColor="#636363"
+                android:textSize="@dimen/title_size" />
+
+            <LinearLayout
+                android:id="@+id/head"
+                android:layout_width="410dip"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="180dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/time"
+                    android:textColor="#636363"
+                    android:textSize="@dimen/title_size" />
+
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/action"
+                    android:textColor="#636363"
+                    android:textSize="@dimen/title_size" >
+                </TextView>
+                
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/operator"
+                    android:textColor="#636363"
+                    android:textSize="@dimen/title_size" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.xuyulong.ui.HVListView
+            android:id="@+id/mList"
+            android:layout_width="800.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:cacheColorHint="@null"
+            android:dividerHeight="1.0dip"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:fastScrollEnabled="true" >
+        </com.xuyulong.ui.HVListView>
+    </LinearLayout>
+
+</RelativeLayout>

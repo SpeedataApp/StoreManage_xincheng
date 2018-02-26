@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/title_top"
+    android:background="#448EFE">
+
+    <ImageButton
+        android:id="@+id/mTitleBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="10dip"
+        android:src="@drawable/mo_scanner_back_img" />
+
+	<TextView
+	    android:id="@+id/mTitelTxt"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:text="贴标"
+	    android:textColor="@android:color/white"
+	    android:textSize="@dimen/title_size" />
+
+</RelativeLayout>

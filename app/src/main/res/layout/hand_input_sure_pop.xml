@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="#fafafa"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#448EFE"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/mTitelTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="手动输入标签"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/tip_tv"
+            android:text="标签号:"
+            android:textColor="#636363"
+            android:textSize="@dimen/title_size" />
+
+        <EditText
+            android:layout_width="0dip"
+            android:id="@+id/handInputLabel"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:hint="请输入"
+            android:inputType="numberDecimal"
+            android:maxLines="2"
+            android:textColor="#636363"
+            android:textSize="@dimen/title_size" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ipLinearLayout"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#636363"
+            android:textSize="@dimen/title_size" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:hint="格式：http://192.168.1.103" />
+    </LinearLayout>
+    
+    
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/u_tab_above" />
+
+    <LinearLayout
+        android:id="@+id/bt1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/btSure"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:text="确认"
+            android:textSize="@dimen/title_size" />
+
+        <Button
+            android:id="@+id/btCancle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textSize="@dimen/title_size" />
+    </LinearLayout>
+
+</LinearLayout>

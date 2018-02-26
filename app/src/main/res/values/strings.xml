@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">产生单位</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="weifeimingcheng">危废名称:</string>
+    <string name="chanfeizhuangzhi">产生装置:</string>
+    <string name="yoouhaichengfeng">有害成分:</string>
+    <string name="zhuanyiren">转移人:</string>
+    <string name="weixianqingkuang">危险情况:</string>
+    <string name="zhongliang">重量(kg):</string>
+    <string name="biaoqianhao">标签号</string>
+    <string name="mingcheng">名称</string>
+    <string name="shuliang">总数:</string>
+    <string name="biaoqian">标签</string>
+    <string name="time">时间</string>
+    <string name="action">处理</string>
+    <string name="operator">操作人</string>
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+
+</resources>

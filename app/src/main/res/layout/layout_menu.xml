@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="50dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mGeRen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/btn_people"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:textColor="#000000"
+            android:text="个人"
+            android:textSize="@dimen/title_size" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/u_tab_above" />
+
+        <TextView
+            android:id="@+id/mSetting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/btn_setting"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="设置"
+            android:textColor="#000000"
+            android:textSize="@dimen/title_size" />
+         
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/u_tab_above" />
+    </LinearLayout>
+
+</RelativeLayout>
