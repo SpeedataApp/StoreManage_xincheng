@@ -1,14 +1,5 @@
 package com.xuyulong.util;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
@@ -20,6 +11,15 @@ import com.wenyankeji.entity.NetRequest;
 import com.wenyankeji.entity.ResultMessage;
 import com.wenyankeji.entity.User;
 import com.xuyulong.Store.AppConfig;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class Until {
 
@@ -279,17 +279,18 @@ public class Until {
 
 	/**
 	 * 登陆的请求json
-	 * 
-	 * @param userName
-	 * @param pwd
+	 * @param userName  登录名称
+	 * @param pwd  登录密码
+	 * @param deviceId  设备唯一码
 	 * @return
 	 */
-	static public String login_req(String userName, String pwd) {
+	static public String login_req(String userName, String pwd,String deviceId) {
 
 		NetRequest req = new NetRequest();
 		User user = new User();
 		user.setUsername(userName);
 		user.setPassword(pwd);
+		user.setDeviceid(deviceId);
 		user.setPlatform(AppConfig.getInstance().Platform);
 
 		req.setUser(user);

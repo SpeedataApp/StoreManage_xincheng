@@ -92,7 +92,7 @@ public class MainActivity extends BaseActivity {
                                 .get());
                         break;
                     case 1:
-                        startActivity(GaoPinSpeedataAct_.intent(MainActivity.this)
+                        startActivity(ChuKu_Activity_.intent(MainActivity.this)
                                 .get());
                         break;
 //				case 1:

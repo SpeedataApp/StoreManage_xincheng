@@ -1,26 +1,18 @@
 package com.xuyulong.Store;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Background;
-import org.androidannotations.annotations.CheckedChange;
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.Extra;
-import org.androidannotations.annotations.UiThread;
-import org.androidannotations.annotations.ViewById;
-
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Build;
 import android.os.Environment;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
+import android.telecom.TelecomManager;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -36,6 +28,21 @@ import com.xuyulong.ui.HandInputDlg.handInputSureListener;
 import com.xuyulong.util.BaseActivity;
 import com.xuyulong.util.HttpUtils;
 import com.xuyulong.util.Until;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.CheckedChange;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
+import org.androidannotations.annotations.UiThread;
+import org.androidannotations.annotations.ViewById;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 
 @SuppressLint("Registered")
 @EActivity(R.layout.login_activity)
@@ -117,10 +124,25 @@ public class Login_Activity extends BaseActivity {
      * @param userName
      * @param pwd
      */
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Background
     void loginNet(String userName, String pwd) {
-
-        String request = Until.login_req(userName, pwd);
+        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        for (int slot = 0; slot < telephonyManager.getPhoneCount(); slot++) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
+            String imei = telephonyManager.getDeviceId(slot);
+            Log.i("tw", "loginNet: "+imei);
+        }
+        String request = Until.login_req(userName, pwd,telephonyManager.getDeviceId());
 
         LOGIN_URL = AppConfig.getInstance().serviceIp
                 + AppConfig.getInstance().serviceIpAfter + "login";
@@ -267,7 +289,6 @@ public class Login_Activity extends BaseActivity {
 
     /**
      * 退出失败
-     *
      */
     @UiThread
     void exitErr(String result) {

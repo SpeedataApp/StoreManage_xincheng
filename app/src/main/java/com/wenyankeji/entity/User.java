@@ -4,47 +4,60 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class User implements Serializable {
-	private String username = "";
-	private String password = "";
-	private int platform;
-	private BigDecimal UserId;
-	
+    private String username = "";
+    private String password = "";
+    private String deviceid = "";
+    private int platform;
+    private BigDecimal UserId;
 
-	public String getUsername() {
-		return username;
-	}
+    public String getDeviceid() {
+        return deviceid;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public void setDeviceid(String deviceid) {
+        this.deviceid = deviceid;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public int getPlatform() {
-		return platform;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setPlatform(int platform) {
-		this.platform = platform;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	@Override
-	public String toString() {
-		return "User [username=" + username + ", password=" + password
-				+ ", platform=" + platform + "]";
-	}
+    public int getPlatform() {
+        return platform;
+    }
 
-	public BigDecimal getUserId() {
-		return UserId;
-	}
+    public void setPlatform(int platform) {
+        this.platform = platform;
+    }
 
-	public void setUserId(BigDecimal userId) {
-		UserId = userId;
-	}
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", deviceid='" + deviceid + '\'' +
+                ", platform=" + platform +
+                ", UserId=" + UserId +
+                '}';
+    }
+
+    public BigDecimal getUserId() {
+        return UserId;
+    }
+
+    public void setUserId(BigDecimal userId) {
+        UserId = userId;
+    }
 }
