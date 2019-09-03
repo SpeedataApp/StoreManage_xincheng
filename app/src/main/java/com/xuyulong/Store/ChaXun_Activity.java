@@ -275,7 +275,7 @@ public class ChaXun_Activity extends SpeekBaseActivity {
 
 		// 如果是思必拓手持机
 		else if (AppConfig.getInstance().handPhone == 2) {
-			if (keyCode == 134 || keyCode == 135) {
+			if (keyCode == 134 || keyCode == 135|| keyCode == 136|| keyCode == 137) {
 				if (event.getRepeatCount() == 0) {
 					mySpinnerButton.keyDown(keyCode);
 					return true;

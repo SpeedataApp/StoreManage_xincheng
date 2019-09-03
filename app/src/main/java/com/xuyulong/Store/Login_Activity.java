@@ -349,6 +349,7 @@ public class Login_Activity extends BaseActivity {
     /**
      * 读取配置文件里面的服务器ip地址
      */
+    @SuppressLint("WrongConstant")
     private void serviceIpInit() {
         try {
 

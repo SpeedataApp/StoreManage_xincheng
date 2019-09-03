@@ -88,114 +88,118 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/bbuttom"
-        android:layout_below="@+id/title_top"
-        android:background="#f1f1f1"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:paddingTop="10dip"
-            android:weightSum="12">
-
-            <TextView
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="@string/biaoqian"
-                android:textColor="#636363"
-                android:textSize="@dimen/title_size" />
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bbuttom"
+            android:layout_below="@+id/title_top"
+            android:background="#f1f1f1"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="0dip"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="6"
-                android:orientation="vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingTop="10dip"
+                android:paddingRight="10dip"
+                android:weightSum="12">
 
                 <TextView
-                    android:id="@+id/mQrCode"
-                    android:layout_width="fill_parent"
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:textColor="#9A9A9A"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/biaoqian"
+                    android:textColor="#636363"
                     android:textSize="@dimen/title_size" />
 
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dip"
-                    android:background="@drawable/txt_bg" />
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mQrCode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:textColor="#9A9A9A"
+                        android:textSize="@dimen/title_size" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:background="@drawable/txt_bg" />
+                </LinearLayout>
+
+                <com.xuyulong.ui.MySpinnerButton
+                    android:id="@+id/mySpinnerButton"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/s1" />
+
+                <ImageButton
+                    android:id="@+id/handInput"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/pan" />
             </LinearLayout>
 
-            <com.xuyulong.ui.MySpinnerButton
-                android:id="@+id/mySpinnerButton"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="@android:color/transparent"
-                android:src="@drawable/s1" />
+            <include
+                android:id="@+id/waste_detail"
+                layout="@layout/waste_detail" />
 
-            <ImageButton
-                android:id="@+id/handInput"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="@android:color/transparent"
-                android:src="@drawable/pan" />
+            <LinearLayout style="@style/TextBule">
+
+                <CheckBox
+                    style="@style/TextTitle"
+                    android:layout_height="@dimen/title_size"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+
+                <TextView
+                    style="@style/TextTitle"
+                    android:layout_weight="4"
+                    android:text="@string/biaoqianhao" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="@dimen/title_size"
+                    android:layout_marginRight="2dip"
+                    android:background="#636363" />
+
+                <TextView
+                    style="@style/TextTitle"
+                    android:layout_weight="2.5"
+                    android:text="@string/mingcheng" />
+
+                <TextView
+                    style="@style/TextTitle"
+                    android:layout_weight="1.5"
+                    android:text="@string/shuliang" />
+
+                <TextView
+                    android:id="@+id/count_tv"
+                    style="@style/TextTitle"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <com.xuyulong.ui.QQListView
+                android:id="@+id/mList"
+                style="@style/List"></com.xuyulong.ui.QQListView>
         </LinearLayout>
-
-        <include
-            android:id="@+id/waste_detail"
-            layout="@layout/waste_detail" />
-
-        <LinearLayout style="@style/TextBule">
-
-            <CheckBox
-                style="@style/TextTitle"
-                android:layout_height="@dimen/title_size"
-                android:layout_weight="1"
-                android:visibility="invisible" />
-
-            <TextView
-                style="@style/TextTitle"
-                android:layout_weight="4"
-                android:text="@string/biaoqianhao" />
-
-            <View
-                android:layout_width="1dip"
-                android:layout_height="@dimen/title_size"
-                android:layout_marginRight="2dip"
-                android:background="#636363" />
-
-            <TextView
-                style="@style/TextTitle"
-                android:layout_weight="2.5"
-                android:text="@string/mingcheng" />
-
-            <TextView
-                style="@style/TextTitle"
-                android:layout_weight="1.5"
-                android:text="@string/shuliang" />
-
-            <TextView
-                android:id="@+id/count_tv"
-                style="@style/TextTitle"
-                android:layout_weight="1"
-                android:text="0"
-                android:textColor="@color/red" />
-        </LinearLayout>
-
-        <com.xuyulong.ui.QQListView
-            android:id="@+id/mList"
-            style="@style/List"></com.xuyulong.ui.QQListView>
-    </LinearLayout>
-
+    </ScrollView>
 </RelativeLayout>

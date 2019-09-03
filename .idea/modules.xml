@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JZN_StoreMAnager.iml" filepath="$PROJECT_DIR$/JZN_StoreMAnager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StoreManage_xincheng.iml" filepath="$PROJECT_DIR$/StoreManage_xincheng.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
